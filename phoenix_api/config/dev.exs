@@ -23,7 +23,7 @@ config :phoenix_api, PhoenixApiWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "y7aeYY4GVW+x3hpCARIbhwf7YZ1/Z5CMLLMggyGkgObcGbZ9mNAY1SHotY/UIDKm",
+  secret_key_base: "1LZ+yp6VY/RgXA0RfSFXlXdZtdPXHXvAIdZK0/i4/2g5AdV9o9G3DrNJ3teBE59f",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:phoenix_api, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:phoenix_api, ~w(--watch)]}

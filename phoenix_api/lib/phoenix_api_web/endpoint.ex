@@ -7,7 +7,7 @@ defmodule PhoenixApiWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_phoenix_api_key",
-    signing_salt: "BzM/o7+F",
+    signing_salt: "G85RG8Z0",
     same_site: "Lax"
   ]
 

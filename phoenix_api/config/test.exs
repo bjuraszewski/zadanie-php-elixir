@@ -17,7 +17,7 @@ config :phoenix_api, PhoenixApi.Repo,
 # you can enable the server option below.
 config :phoenix_api, PhoenixApiWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "bQ04pFYWW28kuEr+MAdLYfJvSEymfAVdQg4zixxfSgvyWDPbNxx3epYC/VqJ1X96",
+  secret_key_base: "O4IycuqaJPBsfNgk5ZqrTB7k4C5YOf16NiG7z/qU5LKulE5Nx7u7iHkkfwcJRJk2",
   server: false
 
 # In test we don't send emails

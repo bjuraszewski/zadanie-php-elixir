@@ -20,7 +20,7 @@ config :phoenix_api, PhoenixApiWeb.Endpoint,
     layout: false
   ],
   pubsub_server: PhoenixApi.PubSub,
-  live_view: [signing_salt: "XxFmhIQr"]
+  live_view: [signing_salt: "hiwDYaUI"]
 
 # Configure the mailer
 #
