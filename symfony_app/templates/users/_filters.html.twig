@@ -1,0 +1,40 @@
+<div class="card mb-4">
+	<div class="card-body">
+		{{ form_start(filterForm, {'attr': {'class': 'row g-3'}}) }}
+		<div class="col-md-3">
+			{{ form_label(filterForm.first_name, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.first_name, {'attr': {'class': 'form-control'}}) }}
+		</div>
+		<div class="col-md-3">
+			{{ form_label(filterForm.last_name, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.last_name, {'attr': {'class': 'form-control'}}) }}
+		</div>
+		<div class="col-md-2">
+			{{ form_label(filterForm.gender, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.gender, {'attr': {'class': 'form-select'}}) }}
+		</div>
+		<div class="col-md-2">
+			{{ form_label(filterForm.born_after, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.born_after, {'attr': {'class': 'form-control'}}) }}
+		</div>
+		<div class="col-md-2">
+			{{ form_label(filterForm.born_before, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.born_before, {'attr': {'class': 'form-control'}}) }}
+		</div>
+
+		<div class="col-md-3">
+			{{ form_label(filterForm.sort_by, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.sort_by, {'attr': {'class': 'form-select'}}) }}
+		</div>
+		<div class="col-md-3">
+			{{ form_label(filterForm.sort_order, null, {'label_attr': {'class': 'form-label'}}) }}
+			{{ form_widget(filterForm.sort_order, {'attr': {'class': 'form-select'}}) }}
+		</div>
+
+		<div class="col-12">
+			<button type="submit" class="btn btn-primary">Search</button>
+			<a href="{{ path('app_users') }}" class="btn btn-secondary">Reset</a>
+		</div>
+		{{ form_end(filterForm) }}
+	</div>
+</div>

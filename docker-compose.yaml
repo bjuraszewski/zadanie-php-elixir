@@ -10,14 +10,14 @@ services:
     ports:
       - "5432:5432"
 
-  # phoenix:
-  #   build: ./phoenix-api
-  #   environment:
-  #     DATABASE_URL: ecto://postgres:postgres@db/phoenix_api
-  #   depends_on:
-  #     - db
-  #   ports:
-  #     - "4000:4000"
+  phoenix:
+    build: ./phoenix_api
+    environment:
+      DATABASE_URL: ecto://postgres:postgres@db/phoenix_api
+    depends_on:
+      - db
+    ports:
+      - "4000:4000"
 
   adminer:
     image: adminer
@@ -26,3 +26,11 @@ services:
       - "8080:8080"
     depends_on:
       - db
+
+  symfony:
+    build: ./symfony_app
+    userns_mode: "keep-id"
+    volumes:
+      - ./symfony_app:/var/www/html:Z
+    ports:
+      - "8000:8080"

@@ -4,7 +4,7 @@ import Config
 config :phoenix_api, PhoenixApi.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "localhost",
+  hostname: "db",
   database: "phoenix_api_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
@@ -19,7 +19,7 @@ config :phoenix_api, PhoenixApi.Repo,
 config :phoenix_api, PhoenixApiWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
@@ -58,12 +58,12 @@ config :phoenix_api, PhoenixApiWeb.Endpoint,
     web_console_logger: true,
     patterns: [
       # Static assets, except user uploads
-      ~r"priv/static/(?!uploads/).*\.(js|css|png|jpeg|jpg|gif|svg)$"E,
+      ~r"priv/static/(?!uploads/).*\.(js|css|png|jpeg|jpg|gif|svg)$",
       # Gettext translations
-      ~r"priv/gettext/.*\.po$"E,
+      ~r"priv/gettext/.*\.po$",
       # Router, Controllers, LiveViews and LiveComponents
-      ~r"lib/phoenix_api_web/router\.ex$"E,
-      ~r"lib/phoenix_api_web/(controllers|live|components)/.*\.(ex|heex)$"E
+      ~r"lib/phoenix_api_web/router\.ex$",
+      ~r"lib/phoenix_api_web/(controllers|live|components)/.*\.(ex|heex)$"
     ]
   ]
 
