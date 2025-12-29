@@ -14,4 +14,5 @@ interface PhoenixApiInterface
     public function updateUser(int $id, UserDataDTO $userData): array;
 
     public function deleteUser(int $id): bool;
+    public function importUsers(): array;
 }

@@ -59,4 +59,14 @@ class PhoenixApiService implements PhoenixApiInterface
             return false;
         }
     }
+
+    public function importUsers(): array
+    {
+        try {
+            $response = $this->phoenixClient->request('POST', '/import');
+            return $response->toArray();
+        } catch (\Throwable $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }

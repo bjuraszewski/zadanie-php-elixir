@@ -22,10 +22,16 @@
 {% block header %}
 	<div class="d-flex justify-content-between align-items-center mb-4">
 		<h1>Users List</h1>
-		<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createUserModal">
-			<i class="bi bi-person-plus"></i>
-			New User
-		</button>
+		<div class="d-flex gap-2">
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#importUsersModal">
+				<i class="bi bi-download"></i>
+				Import Users
+			</button>
+			<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createUserModal">
+				<i class="bi bi-person-plus"></i>
+				New User
+			</button>
+		</div>
 	</div>
 {% endblock %}
 
@@ -42,6 +48,7 @@
 	{% include 'users/_create_modal.html.twig' %}
 	{% include 'users/_edit_modal.html.twig' %}
 	{% include 'users/_delete_modal.html.twig' %}
+	{% include 'users/_import_modal.html.twig' %}
 {% endblock %}
 
 {% block javascripts %}

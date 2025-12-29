@@ -125,4 +125,18 @@ class UsersController extends AbstractController
             'gender' => $gender,
         ]);
     }
+
+    #[Route('/import', name: 'app_users_import', methods: ['POST'])]
+    public function import(): Response
+    {
+        $result = $this->phoenixApi->importUsers();
+
+        if (isset($result['error'])) {
+            $this->addFlash('danger', 'Error importing users: ' . $result['error']);
+        } else {
+            $this->addFlash('success', 'Users imported successfully.');
+        }
+
+        return $this->redirectToRoute('app_users');
+    }
 }

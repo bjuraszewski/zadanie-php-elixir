@@ -17,16 +17,9 @@ defmodule PhoenixApiWeb.Router do
   scope "/", PhoenixApiWeb do
     pipe_through(:api)
 
-    # get "/", PageController, :home
-
-    get("/import", UserController, :import)
+    post("/import", UserController, :import)
     resources("/users", UserController, only: [:index, :show, :create, :update, :delete])
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", PhoenixApiWeb do
-  #   pipe_through :api
-  # end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
   if Application.compile_env(:phoenix_api, :dev_routes) do
