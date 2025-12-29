@@ -1,0 +1,11 @@
+vendor/
+var/
+.env.local
+.env.local.php
+.env.dev.local
+.env.test.local
+public/bundles/
+public/build/
+.git/
+.dockerignore
+Dockerfile*

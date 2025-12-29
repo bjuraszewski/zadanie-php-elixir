@@ -38,6 +38,9 @@ services:
   symfony:
     build:
       context: ./symfony_app
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
+    userns_mode: "keep-id"
+    volumes:
+      - ./symfony_app:/var/www/html:Z
     ports:
       - "8000:8080"

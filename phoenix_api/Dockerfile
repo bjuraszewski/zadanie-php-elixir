@@ -13,11 +13,15 @@ WORKDIR /app
 
 # Install mix dependencies
 COPY mix.exs mix.lock ./
-RUN mix deps.get
+RUN mix deps.get && mix deps.compile
 
 COPY . .
+
+# Ensure the lock file is synced if the host version was outdated
 RUN mix deps.get
 
+# Compile the application
+RUN mix compile
 
 EXPOSE 4000
 

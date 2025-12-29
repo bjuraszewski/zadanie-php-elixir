@@ -1,10 +1,5 @@
 FROM php:8.4-apache
 
-COPY --from=composer /usr/bin/composer /usr/bin/composer
-
-RUN apt-get update && apt-get install -y --fix-missing \
-    zip
-
 RUN a2enmod rewrite
 
 # Change Apache Listen port to 8080 (non-privileged)
@@ -28,7 +23,3 @@ RUN mkdir -p ${APACHE_RUN_DIR} ${APACHE_LOCK_DIR} ${APACHE_LOG_DIR} && \
     chmod -R 777 /tmp/apache2
 
 WORKDIR /var/www/html
-
-COPY . .
-
-RUN composer install --no-interaction
