@@ -20,7 +20,7 @@ class PhoenixApiService implements PhoenixApiInterface
             $response = $this->phoenixClient->request('GET', '/users', [
                 'query' => $filterDTO->toArray(),
             ]);
-            return $response->toArray()['data'];
+            return $response->toArray();
         } catch (\Throwable $e) {
             return ['error' => $e->getMessage()];
         }

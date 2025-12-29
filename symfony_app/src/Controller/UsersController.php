@@ -35,6 +35,10 @@ class UsersController extends AbstractController
 
         $users = $this->phoenixApi->getUsers($filterDTO);
 
+        if (isset($users['error'])) {
+            $this->addFlash('danger', 'Error getting users: ' . $users['error']);
+        }
+
         return $this->render('users/index.html.twig', [
             'users' => $users,
             'filterForm' => $filterForm->createView(),
