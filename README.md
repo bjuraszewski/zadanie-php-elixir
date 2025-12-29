@@ -99,3 +99,13 @@ Lub użyć przycisku "Import Users"  na panelu Symfony App. (Dodane poza wymagan
 Aplikacja Symfony App pozwala na zarządzanie użytkownikami graficznym panelem użytkownika bedąc proxy do Phoenix API.
 
 ### URL: http://localhost:8000
+
+## Źródła danych
+
+Imiona męskie - https://dane.gov.pl/pl/dataset/1667,lista-imion-wystepujacych-w-rejestrze-pesel-osoby-zyjace/resource/63929/table?page=1&per_page=20&q=&sort=
+
+Imiona żeńskie - https://dane.gov.pl/pl/dataset/1667,lista-imion-wystepujacych-w-rejestrze-pesel-osoby-zyjace/resource/63924/table?page=1&per_page=20&q=&sort=
+
+Nazwiska męskie - https://dane.gov.pl/pl/dataset/1681,nazwiska-osob-zyjacych-wystepujace-w-rejestrze-pesel/resource/63892/table?page=1&per_page=20&q=&sort=
+
+Nazwiska żeńskie - https://dane.gov.pl/pl/dataset/1681,nazwiska-osob-zyjacych-wystepujace-w-rejestrze-pesel/resource/63888/table?page=1&per_page=20&q=&sort=
