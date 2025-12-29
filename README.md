@@ -17,7 +17,7 @@ make up
 lub
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Setup aplikacji - dev mode
@@ -29,7 +29,7 @@ make up-dev
 ```
 lub
 ```bash
-docker-compose -f docker-compose.dev.yaml up -d
+docker compose -f docker-compose.dev.yaml up -d
 ```
 
 ## Czyszczenie aplikacji - build
@@ -40,7 +40,7 @@ make down
 ```
 lub
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## Czyszczenie aplikacji - dev mode
@@ -51,7 +51,7 @@ make down-dev
 ```
 lub
 ```bash
-docker-compose -f docker-compose.dev.yaml down
+docker compose -f docker-compose.dev.yaml down
 ```
 
 ## Porty/Envy
@@ -65,7 +65,7 @@ Dla uproszczenia porty zostały ustawione na sztywno w docker-compose.yaml:
 
 Zmiany w plikach .env wymagają przebudowania obrazów:
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 ## Import danych
