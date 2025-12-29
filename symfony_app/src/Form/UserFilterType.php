@@ -45,7 +45,7 @@ class UserFilterType extends AbstractType
                 'label' => 'Born Before',
             ])
             ->add('sort_by', ChoiceType::class, [
-                'required' => false,
+                'required' => true,
                 'choices' => [
                     'ID' => 'id',
                     'First Name' => 'first_name',
@@ -56,7 +56,7 @@ class UserFilterType extends AbstractType
                 'label' => 'Sort By',
             ])
             ->add('sort_order', ChoiceType::class, [
-                'required' => false,
+                'required' => true,
                 'choices' => [
                     'Ascending' => 'asc',
                     'Descending' => 'desc',
